@@ -131,7 +131,7 @@ You can do more than just store strings on objects, you can reference completely
 ~~~JS
 var actions = {
 	add: function(){
-		$('body').append('<div class='item'></div>')
+		$('body').append('<div class="item"></div>')
 	},
 	clear: function(){
 		$('.item').remove(); // Clear the .item divs.
