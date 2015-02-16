@@ -19,7 +19,7 @@ Here's an example of a slideshow with hardcoded everything.
 	<li data-which="german-shephard.jpg">German Shephard</li>
 	<li data-which="labrador.jpg">Labrador</li>
 	<li data-which="rottweiler.jpg">Rottweiler</li>
-	<li data-which="pyrnees-wolf-mix.jpg">Pyrnees Mix</li>
+	<li data-which="pyrenees-wolf-mix.jpg">Pyrnees Mix</li>
 </ul>
 ````
 
