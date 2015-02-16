@@ -19,7 +19,7 @@ Here's an example of a slideshow with hardcoded everything.
 	<li data-which="german-shephard.jpg">German Shephard</li>
 	<li data-which="labrador.jpg">Labrador</li>
 	<li data-which="rottweiler.jpg">Rottweiler</li>
-	<li data-which="pyrnees-wolf-mix.jpg">Pyrnees Mix</li>
+	<li data-which="pyrenees-wolf-mix.jpg">Pyrnees Mix</li>
 </ul>
 ````
 
@@ -28,7 +28,9 @@ Here's an example of a slideshow with hardcoded everything.
 
 $('$thumbnail-drawer li').on('click', function(){
 		var image_name = $(this).attr('data-which');
-		var image_markup = '<img src="images/'+image_name+'"/>'
+		
+		var image_markup = '<img src="images/'+image_name+'"/>';
+		
 		$('#slideshow-image-canvas').html(image_markup);
 });
 ````
@@ -50,13 +52,16 @@ If we we want to make a slideshow that can handle a flexible number of images, w
 var current_index = 0;
 
 $('.button').on('click', function(){
-	var which = $(this).attr('data-which'),
+	var which = $(this).attr('data-which');
+	
 	if (which == 'next') {
 		current_index = current_index + 1;
 	} else {
 		current_index = current_index - 1;
 	}
+	
 	var image_markup = '<img src="images/image-'+current_index+'.jpg"/>';
+	
 	$('#slideshow-image-canvas').html(image_markup);
 });
 
