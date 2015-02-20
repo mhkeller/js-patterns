@@ -35,6 +35,8 @@ $('#tabs li').on('click', function(){
   // Hide all content group items
   $('#content-groups li').hide();
   // Show the content group item that has the eyedropped value as its `data-which` value.
+  // Note: So far we've been doing CSS selectors just by class, id or html tag name.
+  // This example also uses the data-attribute as the selector. Read more about that here: http://stackoverflow.com/questions/4146502/jquery-selectors-on-custom-data-attributes-on-html5
   $('#content-groups li[data-which="'+which+'"]').show();
 });
 
