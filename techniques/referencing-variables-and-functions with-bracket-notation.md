@@ -147,3 +147,26 @@ $('.click').on('click', function(){
 So we're doing the same thing here, except the things we're accessing are functions instead of variables. 
 
 Notice that after the function reference, we added `()` in order to invoke the function. If we didn't do that, the function wouldn't run. You can also use the more expressive syntax `actions[action].call()` method if you like how that looks better.
+
+Or you can save it as a variable like so 
+
+```js
+~~~JS
+var actions = {
+	add: function(){
+		$('body').append('<div class="item"></div>')
+	},
+	clear: function(){
+		$('.item').remove(); // Clear the .item divs.
+	}
+}
+
+$('.click').on('click', function(){
+	var $this_button = $(this);
+	var action = $this_button.attr('data-action'); // This will be either `'add'` or `'clear'` as strings
+	var action_function = actions[action]
+	
+	// Execute the function
+	action_function()
+})
+```
