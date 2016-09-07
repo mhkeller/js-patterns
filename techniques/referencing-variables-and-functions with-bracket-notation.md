@@ -20,7 +20,7 @@ init();
 
 ````
 
-You can see `name` is just a free-floating, global variable, which is fine because our app is pretty small. But this could quickly get disorganized if we had ten other variables like `occupation`', `age`, `city` etc.
+You can see `name` is just a free-floating, global variable, which is fine because our app is pretty small. But this could quickly get disorganized if we had ten other variables like `occupation`, `age`, `city` etc.
 
 One option is to group those variables together on an object.
 
